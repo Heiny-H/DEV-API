@@ -1,0 +1,10 @@
+{
+  "port": 59083,
+  "dbName": "dbInfo",
+  "ip": "127.0.0.1",
+  "storageEngine": "ephemeralForTest",
+  "replSet": "null",
+  "dbPath": "C:UsersHellenAppDataLocalTempmongo-mem-4560stRF8MAUp1uh",
+  "uri": "mongodb://127.0.0.1:59083/dbInfo",
+  "mongod_pid": 7516
+}
