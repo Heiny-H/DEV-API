@@ -62,11 +62,11 @@ def update_user(_id):
     usuario = request.json['usuario']
     email = request.json['email']
     senha = request.json['senha']
-    if username and email and password and _id:
+    if usuario and email and senha and _id:
         hashed_password = generate_password_hash(password)
         mongo.db.users.update_one(
             {'_id': ObjectId(_id['$oid']) if '$oid' in _id else ObjectId(_id)}, {'$set': {'usuario': usuario, 'email': email, 'senha': hashed_password}})
-        resposta = jsonify({'mensagem': 'usuario' + _id + 'Updated Successfuly'})
+        resposta = jsonify({'mensagem': 'usuario' + _id + 'Atualizado com Sucesso'})
         resposta.status_code = 200
         return resposta
     else:
